@@ -1,0 +1,2 @@
+gcopter:map_gen/mockamap
+-DCATKIN_DEVEL_PREFIX=/home/b212/GCOPTER_Yanyang/devel -DCMAKE_INSTALL_PREFIX=/home/b212/GCOPTER_Yanyang/install -G Unix Makefiles
