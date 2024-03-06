@@ -1,0 +1,66 @@
+# MapTopic: 模拟地图的话题名称，通常用于订阅地图数据。
+# TargetTopic: 目标位置的话题名称，通常用于发布机器人的目标位置。
+# DilateRadius: 地图膨胀半径，用于扩展地图中障碍物的大小，以便考虑机器人的尺寸。
+# VoxelWidth: 每个体素（地图中的小立方体）的宽度。
+# MapBound: 地图的边界范围，以 [xmin, xmax, ymin, ymax, zmin, zmax] 的形式表示。
+# TimeoutRRT: RRT（Rapidly-exploring Random Tree）路径规划算法的超时时间。
+# MaxVelMag: 最大线速度大小。
+# MaxBdrMag: 最大转弯速度大小。
+# MaxTiltAngle: 最大倾斜角度。
+# MinThrust: 最小推力。
+# MaxThrust: 最大推力。
+# VehicleMass: 车辆质量。
+# GravAcc: 重力加速度。
+# HorizDrag: 水平方向的阻力系数。
+# VertDrag: 垂直方向的阻力系数。
+# ParasDrag: 与速度平方成正比的阻力系数。
+# SpeedEps: 速度的极小值。
+# WeightT: 目标函数中速度的权重。
+# ChiVec: 目标函数中正则化项的参数。
+# SmoothingEps: 平滑路径的阈值。
+# IntegralIntervs: 积分间隔。
+# RelCostTol: 相对成本容差。
+
+MapTopic:                   '/voxel_map'
+
+TargetTopic:                '/move_base_simple/goal'
+
+DilateRadius:               0.5
+
+VoxelWidth:                 0.25
+
+MapBound:                   [-25.0, 25.0, -25.0, 25.0, 0.0, 5.0]
+
+TimeoutRRT:                 0.02
+
+MaxVelMag:                  4.0
+
+MaxBdrMag:                  2.1
+
+MaxTiltAngle:               1.05
+
+MinThrust:                  2.0
+
+MaxThrust:                  12.0
+
+VehicleMass:                0.61
+
+GravAcc:                    9.8
+
+HorizDrag:                  0.70
+
+VertDrag:                   0.80
+
+ParasDrag:                  0.01
+
+SpeedEps:                   0.0001
+
+WeightT:                    20.0
+
+ChiVec:                     [1.0e+4, 1.0e+4, 1.0e+4, 1.0e+4, 1.0e+5]
+
+SmoothingEps:               1.0e-2
+
+IntegralIntervs:            16
+
+RelCostTol:                 1.0e-5

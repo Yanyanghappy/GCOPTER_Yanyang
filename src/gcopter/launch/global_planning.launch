@@ -9,6 +9,7 @@
     args="/visualizer/speed /visualizer/total_thrust /visualizer/tilt_angle /visualizer/body_rate">
   </node>
 
+<!-- 模拟地图生成并设置参数 -->
   <node pkg="mockamap" type="mockamap_node" name="mockamap_node" output="screen">
   <param name="seed" type="int" value="1024"/>
   <param name="update_freq" type="double" value="1.0"/>
